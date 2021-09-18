@@ -1305,15 +1305,22 @@ function bootstrap {
   fi
 
   echo "Updating mirror list"
-  curl -sL "$MIRRORLIST_URL" | \
-      sed -e 's/^#Server/Server/' | \
-      rankmirrors --verbose -n 0 - \
-      > /etc/pacman.d/mirrorlist
+  if [ ! -f /tmp/mirrorlist ]
+  then
+    echo 'Server = https://mirror.rackspace.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+    pacman -Sy
+    pacman -S --noconfirm pacman-contrib
+    curl -sL "$MIRRORLIST_URL" | \
+        sed -e 's/^#Server/Server/' | \
+        rankmirrors --verbose -n 0 - \
+        > /tmp/mirrorlist \
+        && cp /tmp/mirrorlist /etc/pacman.d/
+  fi
 
-  echo "Updating keyring and installing pacman-contrib"
+  echo "Updating keyring and installing dialog"
   pacman -Sy --noconfirm \
     archlinux-keyring \
-    pacman-contrib
+    dialog
 
   ### Get infomation from user ###
   hostname=$(dialog --stdout --inputbox "Enter hostname" 0 0) || exit 1
