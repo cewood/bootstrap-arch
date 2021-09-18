@@ -1425,7 +1425,7 @@ EOF
   touch /mnt/.BOOTSTRAPPED
 
   arch-chroot /mnt sudo -u cewood bash -c '\
-    curl -sL https://goo.gl/E1V3sP | bash -s post'
+    curl -sL https://goo.gl/HtC7Mf | bash -s post'
   
   sed -i 's/%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /mnt/etc/sudoers
   sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /mnt/etc/sudoers
