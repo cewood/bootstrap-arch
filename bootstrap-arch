@@ -1381,7 +1381,7 @@ function bootstrap {
   mkdir /mnt/boot
   mount "${part_boot}" /mnt/boot
 
-  pacstrap /mnt base base-devel git zsh
+  pacstrap /mnt base base-devel linux linux-firmware git zsh
   genfstab -U /mnt >> /mnt/etc/fstab
   echo "${hostname}" > /mnt/etc/hostname
 
