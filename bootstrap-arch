@@ -11,49 +11,24 @@ trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
 MIRRORLIST_URL="https://www.archlinux.org/mirrorlist/?country=AT&country=BE&country=DK&country=FR&country=DE&country=NL&country=SE&country=CH&protocol=https&use_mirror_status=on"
 PACKAGE_LIST=(
-  acpi \
-  acpi_call \
-  acpid \
-  acpilight \
-  adobe-source-code-pro-fonts \
-  adobe-source-sans-fonts \
-  aerc \
-  alacritty \
   anki \
   ansible \
   arandr \
-  archlinux-keyring \
   aspell-en \
   audacity \
   aurvote \
   autorandr \
-  bat \
-  bdf-unifont \
-  blueman \
-  bzip2 \
-  boomaga-qt5 \
-  cantarell-fonts \
-  cbatticon \
   chromium \
-  cifs-utils \
   code \
   compton \
-  cryptsetup \
   cups \
-  curl \
-  curlie \
-  device-mapper \
-  diffuse \
-  diffutils \
-  dina-font \
+  darktable \
   dkms \
   dmenu \
   docker \
   docker-compose \
-  dog \
   dropbox \
   dunst \
-  dust \
   e2fsprogs \
   efibootmgr \
   electrum \
@@ -61,31 +36,23 @@ PACKAGE_LIST=(
   eog \
   evemu \
   evince \
-  exa \
   fasd \
   feh \
   ferm \
-  ffmpeg \
-  ffmpegthumbnailer \
   figlet \
   file-roller \
   findutils \
   firefox \
-  flameshot \
-  font-bh-ttf \
-  freetype2 \
-  fuse-common \
-  fuse3 \
   fzf \
   galculator \
   gawk \
   gcc \
   gcc-libs \
+  gdm \
   gedit \
   geteltorito \
   gettext \
   gimp \
-  git \
   git-crypt \
   glibc \
   gnome-calculator \
@@ -105,18 +72,12 @@ PACKAGE_LIST=(
   gnome-tweaks \
   gnome-user-docs \
   gnome-user-share \
-  gnu-free-fonts \
   gnu-netcat \
-  gnupg \
-  go \
+  gnucash \
   google-chrome \
   gopass \
   gparted \
   gpg-crypter \
-  gpgme \
-  gpicview \
-  graphviz \
-  green-recorder \
   grep \
   grilo-plugins \
   gthumb \
@@ -130,19 +91,15 @@ PACKAGE_LIST=(
   gvfs-nfs \
   gvfs-smb \
   gzip \
-  hplip \
   htop \
   hugin \
   i3-gnome \
   i3-wm \
-  i3lock-color \
   i3status \
   inetutils \
   intel-ucode \
   intellij-idea-community-edition \
-  inter-font \
   iproute2 \
-  iptables \
   iputils \
   ispell \
   iw \
@@ -167,7 +124,7 @@ PACKAGE_LIST=(
   make \
   man-db \
   man-pages \
-  masterpdfeditor-free \
+  masterpdfeditor \
   maven \
   mdadm \
   mousetweaks \
@@ -180,17 +137,12 @@ PACKAGE_LIST=(
   netctl \
   network-manager-applet \
   networkmanager \
-  networkmanager-openconnect \
-  noto-fonts \
-  noto-fonts-emoji \
   ntp \
   obs-studio \
-  openconnect \
   openssh \
   openvpn \
   pacaur \
   pacman \
-  pacman-mirrorlist \
   pass \
   patch \
   pavucontrol \
@@ -200,8 +152,6 @@ PACKAGE_LIST=(
   perl-date-manip \
   perl-finance-quote \
   perl-term-readkey \
-  pipewire \
-  pipewire-media-session \
   pkgconf \
   playerctl \
   pnmixer \
@@ -209,10 +159,7 @@ PACKAGE_LIST=(
   procps-ng \
   psmisc \
   pulseaudio \
-  pulseaudio-alsa \
-  pulseaudio-bluetooth \
   python-setuptools \
-  ranger \
   rdesktop \
   redshift \
   reiserfsprogs \
@@ -220,8 +167,6 @@ PACKAGE_LIST=(
   rofi \
   roxterm \
   rsync \
-  rust-analyzer \
-  rustup \
   s-nail \
   sakura \
   seahorse \
@@ -229,7 +174,6 @@ PACKAGE_LIST=(
   shadow \
   simple-scan \
   simplescreenrecorder \
-  smbclient \
   speedcrunch \
   sqlitebrowser \
   sshpass \
@@ -241,45 +185,17 @@ PACKAGE_LIST=(
   system-config-printer \
   systemd-boot-pacman-hook \
   systemd-sysvcompat \
-  tamsyn-font \
   tar \
   tcpdump \
   texinfo \
   the_silver_searcher \
   tig \
   tk \
-  tlp \
   tmux \
   totem \
   tracker-miners \
   tree \
-  tree-sitter \
-  ttf-anonymous-pro \
-  ttf-bitstream-vera \
-  ttf-cascadia-code \
-  ttf-comic-mono-git \
-  ttf-croscore \
-  ttf-dejavu \
-  ttf-droid \
-  ttf-fira-code \
-  ttf-fira-mono \
-  ttf-hack \
-  ttf-ibm-plex \
-  ttf-inconsolata \
-  ttf-jetbrains-mono \
-  ttf-joypixels \
-  ttf-liberation \
-  ttf-linux-libertine \
-  ttf-opensans \
-  ttf-roboto \
-  ttf-ubuntu-font-family \
-  typora \
-  unicode-character-database \
-  unicode-emoji \
-  universal-ctags-git \
   unrar \
-  unzip \
-  upower \
   usbutils \
   util-linux \
   vagrant \
@@ -299,11 +215,9 @@ PACKAGE_LIST=(
   wireshark-gtk \
   wpa_supplicant \
   x264 \
-  xbindkeys \
   xclip \
   xdg-user-dirs-gtk \
   xdotool \
-  xf86-input-libinput \
   xf86-video-intel \
   xfsprogs \
   xkeycaps \
@@ -312,7 +226,6 @@ PACKAGE_LIST=(
   xorg-xev \
   xorg-xmodmap \
   xscreensaver \
-  xss-lock \
   yay \
   zsh \
 )
@@ -454,7 +367,14 @@ EOF
   touch /mnt/.BOOTSTRAPPED
 
   arch-chroot /mnt sudo -u cewood bash -c '\
-    curl -sL https://goo.gl/HtC7Mf | bash -s post'
+    yay -S --noconfirm archlinux-keyring'
+
+  cp $0 /mnt/bootstrap-arch
+
+  arch-chroot /mnt sudo -u cewood bash -c '\
+    sudo pacman-key --init && sudo pacman-key --populate archlinux'
+
+  arch-chroot /mnt sudo -u cewood bash /bootstrap-arch post
   
   sed -i 's/%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /mnt/etc/sudoers
   sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /mnt/etc/sudoers
