@@ -11,18 +11,14 @@ trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
 MIRRORLIST_URL="https://www.archlinux.org/mirrorlist/?country=AT&country=BE&country=DK&country=FR&country=DE&country=NL&country=SE&country=CH&protocol=https&use_mirror_status=on"
 PACKAGE_LIST=(
-  anki \
-  ansible \
   arandr \
   aspell-en \
-  audacity \
   aurvote \
   autorandr \
   chromium \
   code \
   compton \
   cups \
-  darktable \
   dkms \
   dmenu \
   docker \
@@ -31,7 +27,6 @@ PACKAGE_LIST=(
   dunst \
   e2fsprogs \
   efibootmgr \
-  electrum \
   elinks \
   eog \
   evemu \
@@ -92,18 +87,14 @@ PACKAGE_LIST=(
   gvfs-smb \
   gzip \
   htop \
-  hugin \
-  i3-gnome \
   i3-wm \
   i3status \
   inetutils \
   intel-ucode \
-  intellij-idea-community-edition \
   iproute2 \
   iputils \
   ispell \
   iw \
-  java-openjfx \
   jdk8-openjdk \
   jfsutils \
   jpdftweak \
@@ -160,7 +151,6 @@ PACKAGE_LIST=(
   psmisc \
   pulseaudio \
   python-setuptools \
-  rdesktop \
   redshift \
   reiserfsprogs \
   ripgrep \
@@ -172,7 +162,6 @@ PACKAGE_LIST=(
   seahorse \
   sed \
   shadow \
-  simple-scan \
   simplescreenrecorder \
   speedcrunch \
   sqlitebrowser \
@@ -193,15 +182,12 @@ PACKAGE_LIST=(
   tk \
   tmux \
   totem \
-  tracker-miners \
   tree \
   unrar \
   usbutils \
   util-linux \
   vagrant \
   vi \
-  vinagre \
-  vino \
   virtualbox \
   virtualbox-host-modules-arch \
   vlc \
@@ -210,8 +196,6 @@ PACKAGE_LIST=(
   weechat \
   wget \
   which \
-  wireguard-dkms \
-  wireguard-tools \
   wireshark-gtk \
   wpa_supplicant \
   x264 \
@@ -225,7 +209,6 @@ PACKAGE_LIST=(
   xorg-xbacklight \
   xorg-xev \
   xorg-xmodmap \
-  xscreensaver \
   yay \
   zsh \
 )
