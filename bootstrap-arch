@@ -364,20 +364,12 @@ EOF
     && cd /tmp/yay \
     && makepkg -si --noconfirm'
 
-  touch /mnt/.BOOTSTRAPPED
-
-  arch-chroot /mnt sudo -u cewood bash -c '\
-    yay -S --noconfirm archlinux-keyring'
-
   cp $0 /mnt/bootstrap-arch
-
-  arch-chroot /mnt sudo -u cewood bash -c '\
-    sudo pacman-key --init && sudo pacman-key --populate archlinux'
-
-  arch-chroot /mnt sudo -u cewood bash /bootstrap-arch post
   
   sed -i 's/%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /mnt/etc/sudoers
   sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /mnt/etc/sudoers
+
+  touch /mnt/.BOOTSTRAPPED
 }
 
 
@@ -399,7 +391,9 @@ function post {
   exec 1> >(tee "/tmp/post-stdout.log")
   exec 2> >(tee "/tmp/post-stderr.log")
 
-  yay --noconfirm -S ${PACKAGE_LIST[*]}
+  for PACKAGE in "${PACKAGE_LIST[@]}"; do
+    yay --noconfirm -S ${PACKAGE}
+  done
 }
 
 
@@ -415,5 +409,8 @@ bootstrap)
   ;;
 post)
   post
+  ;;
+chroot)
+  arch-chroot /mnt sudo -u $user bash
   ;;
 esac
