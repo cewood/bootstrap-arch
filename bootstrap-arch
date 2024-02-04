@@ -69,6 +69,7 @@ PACKAGE_LIST=(
   gnome-user-share \
   gnu-netcat \
   gnucash \
+  go \
   google-chrome \
   gopass \
   gparted \
